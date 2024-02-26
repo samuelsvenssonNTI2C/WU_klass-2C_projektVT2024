@@ -39,19 +39,24 @@
 #what_we_do_quickinfo {
     display: flex;
     justify-content: space-between;
+    width: 97.2%;
 }
 
 .parallelogram {
     background: red;
     height: 500px;
     width: 20%;
-    margin: 0px 5px 0px 5px;
-    position: relative;
-	transform: skew(10deg);
+    transition: width 0.5s;
+    margin: 0px 10px 0px 10px;
+	transform: skew(-10deg);
 }
 
-.parallelogram:hover{
+.parallelogram_expanded {
     width: 50%;
+}
+
+#what_we_do_quickinfo p{
+    transform: skew(10deg);
 }
 
 li {
