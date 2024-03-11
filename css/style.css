@@ -11,7 +11,7 @@
     box-sizing: border-box;
 }
 
-.main_menu {
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -27,39 +27,61 @@
     align-items: center;
 }
 
-.main_menu nav {
+header nav {
     width: 100%;
 }
 
-.main_menu nav ul {
+header nav ul {
     display: flex;
     justify-content: space-around;
 }
 
+/*What we do shapes ---------------------------------------------------------------------------------*/
 #what_we_do_quickinfo {
     display: flex;
     justify-content: space-between;
-    width: 97.2%;
+    width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(148, 228, 255);
 }
 
 .parallelogram {
     background: red;
     height: 500px;
-    width: 20%;
+    width: 15%;
     transition: width 0.5s;
-    margin: 0px 10px 0px 10px;
 	transform: skew(-10deg);
+    overflow-x: hidden;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNOYIHnjzvx4v7U9IQc_m9O-DfIuj5us2hEg&usqp=CAU);
+    background-repeat: no-repeat;
+    background-size: 55vw;
+}
+
+.parallelogram ul {
+    display: none;
 }
 
 .parallelogram_expanded {
     width: 50%;
 }
 
-#what_we_do_quickinfo p{
-    transform: skew(10deg);
+.parallelogram_expanded ul {
+    display: block;
 }
 
-li {
+.parallelogram div {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 35vw;
+    transform: skew(10deg);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+/*What we do shapes ---------------------------------------------------------------------------------*/
+
+header li {
     list-style: none;
 }
 

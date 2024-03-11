@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .skewed-container {
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      transform: skew(-10deg);
+      transform-origin: 0 0;
+    }
+
+    .vertical-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) skew(10deg);
+      white-space: nowrap;
+      color: white; /* Om du vill ändra textfärgen för att synas på bilden */
+    }
+
+    .vertical_background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: skew(10deg);
+      transform-origin: 0 0;
+      background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNOYIHnjzvx4v7U9IQc_m9O-DfIuj5us2hEg&usqp=CAU) center center/cover;
+    }
+  </style>
+</head>
+<body>
+
+<div class="skewed-container">
+  <div class="vertical_background"></div>
+  <div class="vertical-text">Vertical Text</div>
+</div>
+
+</body>
+</html>
