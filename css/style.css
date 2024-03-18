@@ -36,13 +36,70 @@ header nav ul {
     justify-content: space-around;
 }
 
+/*Index ---------------------------------------------------------------------------------------------*/
+#index_main {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 300px 300px 300px;
+    grid-template-areas:
+    "wwd"
+    "bes"
+    "coo";
+}
+
+#index_wwd {
+    grid-area: wwd;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "image title"
+    "image text_";
+}
+
+#index_bes {
+    grid-area: bes;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "title image"
+    "text_ image";
+}
+
+#index_coo {
+    grid-area: coo;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "image title"
+    "image text_";
+}
+
+.little_info img {
+    grid-area: image;
+    height: 100%;
+}
+
+.little_info h2 {
+    grid-area: title;
+}
+
+.little_info p {
+    grid-area: text_;
+}
+/*Index ---------------------------------------------------------------------------------------------*/
+
+/*What we do ----------------------------------------------------------------------------------------*/
 /*What we do shapes ---------------------------------------------------------------------------------*/
 #what_we_do_quickinfo {
     display: flex;
     justify-content: space-between;
     width: 100%;
     overflow-x: hidden;
-    background-color: rgb(148, 228, 255);
 }
 
 .parallelogram {
@@ -80,6 +137,7 @@ header nav ul {
     border-radius: 10px;
 }
 /*What we do shapes ---------------------------------------------------------------------------------*/
+/*What we do ----------------------------------------------------------------------------------------*/
 
 header li {
     list-style: none;
