@@ -1,21 +1,49 @@
-.icon {
-    height: 80px;
-    width: auto;
-    margin: 10px;
-}
-
-
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
+h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h2 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h3 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+li {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration-line: underline;
+}
+/*Header ----------------------------------------------------------------------------------------*/
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     background: darkgray;
+    background-color: rgb(99, 186, 45);
+    .icon {
+        height: 80px;
+        width: auto;
+        margin: 10px 20px;
+    }
+    a {
+        font-size: large;
+    }
 }
 
 .main_menu_mid {
@@ -36,24 +64,30 @@ header nav ul {
     justify-content: space-around;
 }
 
-/*Index ---------------------------------------------------------------------------------------------*/
+header li {
+    list-style: none;
+}
+/*Header ----------------------------------------------------------------------------------------*/
+
+/*Index -----------------------------------------------------------------------------------------*/
 #index_main {
     width: 100%;
-
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 300px 300px 300px;
     grid-template-areas:
     "wwd"
     "bes"
-    "coo";
+    "cou";
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #index_wwd {
     grid-area: wwd;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
     "image title"
     "image text_";
@@ -63,39 +97,60 @@ header nav ul {
     grid-area: bes;
     display: grid;
     grid-template-columns: 1fr auto;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
     "title image"
     "text_ image";
+    p {
+        text-align: end;
+    }
+    h2 {
+        text-align: end;
+    }
+    img {
+        border-radius: 0px 20px 20px 0px;
+    }
 }
 
-#index_coo {
-    grid-area: coo;
+#index_cou {
+    grid-area: cou;
     display: grid;
     grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto 1fr;
     grid-template-areas:
     "image title"
     "image text_";
 }
 
-.little_info img {
-    grid-area: image;
-    height: 100%;
+.little_info {
+    margin: 20px 10px 20px 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    a {
+        color: black;
+        text-decoration: none;
+    }
+    img {
+        grid-area: image;
+        height: 260px;
+        width: auto;
+        border-radius: 20px 0px 0px 20px;
+    }
+    h2 {
+        grid-area: title;
+        margin: 5px;
+    }
+    p {
+        grid-area: text_;
+        margin: 5px;
+    }
 }
+/*Index -----------------------------------------------------------------------------------------*/
 
-.little_info h2 {
-    grid-area: title;
-}
-
-.little_info p {
-    grid-area: text_;
-}
-/*Index ---------------------------------------------------------------------------------------------*/
-
-/*What we do ----------------------------------------------------------------------------------------*/
-/*What we do shapes ---------------------------------------------------------------------------------*/
+/*What we do ------------------------------------------------------------------------------------*/
+/*What we do shapes -----------------------------------------------------------------------------*/
 #what_we_do_quickinfo {
+    background-color: rgb(99, 186, 45);
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -103,15 +158,17 @@ header nav ul {
 }
 
 .parallelogram {
-    background: red;
+    border-width: 2px;
+    border-color: darkslategray;
+    border-style: solid;
+    border-radius: 10px;
     height: 500px;
     width: 15%;
     transition: width 0.5s;
 	transform: skew(-10deg);
     overflow-x: hidden;
-    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNOYIHnjzvx4v7U9IQc_m9O-DfIuj5us2hEg&usqp=CAU);
     background-repeat: no-repeat;
-    background-size: 55vw;
+    background-size: cover cover;
 }
 
 .parallelogram ul {
@@ -136,15 +193,225 @@ header nav ul {
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
 }
-/*What we do shapes ---------------------------------------------------------------------------------*/
-/*What we do ----------------------------------------------------------------------------------------*/
+/*What we do shapes -----------------------------------------------------------------------------*/
+/*What we do ------------------------------------------------------------------------------------*/
 
-header li {
-    list-style: none;
+/*Become scout ----------------------------------------------------------------------------------*/
+#become_scout_main {
+    background-color: rgb(99, 186, 45);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+        color: #0000EE;
+        :hover {
+            text-decoration-line: underline;
+        }
+    }
 }
-
-a {
-    text-decoration: none;
-    color: darkslategray;
+#sign_up {
+    margin: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    p {
+        text-align: center;
+    }
+    
 }
+#reviews {
+    margin: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    #title {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        margin-bottom: 20px;
+        h2 {
+            align-self: center;
+        }
+        p {
+            text-align: center;
+        }
+    }
+    
+    section {
+        margin: -10px 40px -10px 40px;
+        width: 45%;
+    }
+    .right {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        align-self: end;
+        p {
+            text-align: end;
+        }
+    }
+}
+/*Become scout ----------------------------------------------------------------------------------*/
 
+/*Images ----------------------------------------------------------------------------------------*/
+#images_main {
+    width: 100%;
+    background-color: rgb(99, 186, 45);
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    img {
+        width: 30%;
+        margin: 20px;
+        border-radius: 20px;
+    }
+}
+/*Images ----------------------------------------------------------------------------------------*/
+
+/*footer ----------------------------------------------------------------------------------------*/
+footer {
+    background-color: rgb(99, 186, 45);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "lin con own";
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/*footer ----------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 800px) {
+    /*Header ----------------------------------------------------------------------------------------*/
+    header {
+        .icon {
+            display: none;
+        }
+    }
+    /*Header ----------------------------------------------------------------------------------------*/
+    
+    /*Index -----------------------------------------------------------------------------------------*/
+        #index_main {
+            grid-template-rows: auto auto auto;
+    }
+    
+    #index_wwd {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+        "image"
+        "title"
+        "text_";
+    }
+    
+    #index_bes {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+        "image"
+        "title"
+        "text_";
+        p {
+            text-align: start;
+        }
+        h2 {
+            text-align: start;
+        }
+        img {
+            border-radius: 20px 20px 00px 0px;
+        }
+    }
+    
+    #index_cou {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+        "image"
+        "title"
+        "text_";
+    }
+    
+    .little_info {
+        img {
+            height: auto;
+            width: 100%;
+            border-radius: 20px 20px 0px 0px;
+        }
+    }
+    /*Index -----------------------------------------------------------------------------------------*/
+    
+    /*What we do ------------------------------------------------------------------------------------*/
+    /*What we do shapes -----------------------------------------------------------------------------*/
+    #what_we_do_quickinfo {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .parallelogram {
+        height: auto;
+        width: 80%;
+        transform: skew(0deg);
+        margin: 10px;
+    }
+    
+    .parallelogram ul {
+        display: block;
+    }
+    
+    .parallelogram_expanded {
+        width: 80%;
+    }
+    
+    .parallelogram div {
+        margin: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+        transform: skew(0deg);
+    }
+    /*What we do shapes -----------------------------------------------------------------------------*/
+    /*What we do ------------------------------------------------------------------------------------*/
+    
+    /*Become scout ----------------------------------------------------------------------------------*/
+    #sign_up {
+        margin: 20px;
+        width: 80%;        
+    }
+    #reviews {
+        margin: 10px;
+        width: 100%;
+        section {
+            margin: 10px 30px 10px 30px;
+            width: 80%;
+        }
+    }
+    /*Become scout ----------------------------------------------------------------------------------*/
+    
+    /*Images ----------------------------------------------------------------------------------------*/
+    #images_main {
+        img {
+            width: 45%;
+            margin: 5px;
+        }
+    }
+    /*Images ----------------------------------------------------------------------------------------*/
+    
+    /*footer ----------------------------------------------------------------------------------------*/
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+        "lin"
+        "con"
+        "own";
+        section {
+            margin: 10px;
+        }
+    }
+    /*footer ----------------------------------------------------------------------------------------*/
+}
