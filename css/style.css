@@ -21,7 +21,7 @@ li {
 }
 
 a {
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-decoration: none;
     color: black;
 }
@@ -68,6 +68,12 @@ header li {
     list-style: none;
 }
 /*Header ----------------------------------------------------------------------------------------*/
+
+/*Main ------------------------------------------------------------------------------------------*/
+main {
+    background-color: rgb(99, 186, 45);
+}
+/*Main ------------------------------------------------------------------------------------------*/
 
 /*Index -----------------------------------------------------------------------------------------*/
 #index_main {
@@ -129,6 +135,7 @@ header li {
     a {
         color: black;
         text-decoration: none;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     img {
         grid-area: image;
@@ -150,7 +157,6 @@ header li {
 /*What we do ------------------------------------------------------------------------------------*/
 /*What we do shapes -----------------------------------------------------------------------------*/
 #what_we_do_quickinfo {
-    background-color: rgb(99, 186, 45);
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -168,7 +174,7 @@ header li {
 	transform: skew(-10deg);
     overflow-x: hidden;
     background-repeat: no-repeat;
-    background-size: cover cover;
+    background-size: cover;
 }
 
 .parallelogram ul {
@@ -198,10 +204,10 @@ header li {
 
 /*Become scout ----------------------------------------------------------------------------------*/
 #become_scout_main {
-    background-color: rgb(99, 186, 45);
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 30px;
     a {
         color: #0000EE;
         :hover {
@@ -218,7 +224,6 @@ header li {
     p {
         text-align: center;
     }
-    
 }
 #reviews {
     margin: 20px;
@@ -229,7 +234,8 @@ header li {
         display: flex;
         flex-direction: column;
         align-self: center;
-        margin-bottom: 20px;
+        margin-top: 0px;
+        margin-bottom: 50px;
         h2 {
             align-self: center;
         }
@@ -239,17 +245,17 @@ header li {
     }
     
     section {
-        margin: -10px 40px -10px 40px;
+        margin: -50px 40px -50px 40px;
         width: 45%;
+        img {
+            height: 40vh;
+        }
     }
     .right {
         display: flex;
         flex-direction: column;
         align-items: end;
         align-self: end;
-        p {
-            text-align: end;
-        }
     }
 }
 /*Become scout ----------------------------------------------------------------------------------*/
@@ -257,7 +263,6 @@ header li {
 /*Images ----------------------------------------------------------------------------------------*/
 #images_main {
     width: 100%;
-    background-color: rgb(99, 186, 45);
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
